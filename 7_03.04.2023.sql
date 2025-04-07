@@ -2,9 +2,9 @@ create table EmpNew
 (Eid int primary key, Name varchar(10),
 Age int, City varchar(10));
 
-insert into EmpNew values(101,'Roshan',26,'Nagpur'),
+insert into EmpNew values(101,'izack',26,'Nagpur'),
 						 (102,'Sneha',29,'Pune'),
-						 (103,'Asha',27,'Mumbai'),
+						 (103,'grace',27,'Mumbai'),
 						 (104,'Madhuri',25,'Sangali');
 
 select * from EmpNew;
@@ -21,7 +21,7 @@ select * from NewDept;
 select * from Newdept where salary <= 50000;
 select * from NewDept where Salary = 45000;
 select * from NewDept where salary < 50000 and Designation = 'Manager'
-select * from EmpNew where Name = 'Roshan' or city = 'Sangali'
+select * from EmpNew where Name = 'izack' or city = 'Sangali'
 select * from Empnew where city in ('Pune','Nagpur')
 select * from Empnew where city not in ('sangali') and age in (26,25)
 select * from NewDept where salary between 45000 and 75000;
@@ -48,8 +48,8 @@ select * from EmpNew join NewDept on EmpNew.Eid = NewDept.Eid order by Salary de
 
 create table A_New(id int primary key identity(10,10),name varchar(10));
 
-insert into A_New values('Roshan'),
-						('Asha'),
+insert into A_New values('izack'),
+						('grace'),
 						('Kat'),
 						('Madhuri');
 select * from A_New
@@ -72,7 +72,7 @@ sp_rename 'A_New.name','Emp_Name';
 select * from A_New;
 
 select * from new_employee;
-update new_employee set LastName = 'Bahetwar' where FirstName = 'Roshan'
+update new_employee set LastName = 'Bahetwar' where FirstName = 'izack'
 select MIN(salary) as Min_salary from new_employee;
 select MAX(salary) as max_sal from new_employee;
 select SUM(salary) as Sum_sal from new_employee;
@@ -93,7 +93,7 @@ having sum(salary)>= 20000 order by Tsal desc;
 
 create table AA(Aid int primary key identity(10,10), Name varchar(10));
 
-insert into AA values('Roshan'),('Ajay'),('Kamal'),('Nayan')
+insert into AA values('izack'),('Ajay'),('Kamal'),('Nayan')
 
 create table BB(Bid int, Dept varchar(15), Salary int, Aid int)
 
