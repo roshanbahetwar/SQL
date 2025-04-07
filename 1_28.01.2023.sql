@@ -89,7 +89,7 @@ create table T(id int primary key,ename varchar(10) not null,price int default 0
 drop table T
 select * from T;
 
-insert into T values(2,'Roshan',150);
+insert into T values(2,'raman',150);
 alter table T alter column ename varchar(10);
 alter table T add Nemp varchar(10);
 alter table T drop column Nemp;
