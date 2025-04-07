@@ -31,7 +31,7 @@ select city,min(salary) as Minsalary from MyEmployee group by City;
 select city, sum(salary) as SumSalary from MyEmployee group by City;
 select City, COUNT(City) as cc from MyEmployee group by City;
 select * from MyEmployee
-select city, count(Emp_id) as No_of_Employee from MyEmployee where city in ('pune','mumbai','kurkheda') 
+select city, count(Emp_id) as No_of_Employee from MyEmployee where city in ('pune','mumbai','goa') 
 															 group by City order by No_of_Employee desc
 select city, count(Emp_id) as No_of_Employee from MyEmployee group by City order by count(Emp_id) desc
 use College;
@@ -46,7 +46,7 @@ select city,count(salary) as DS from MyEmployee group by city having COUNT(salar
 
 create table R1(id int primary key,name varchar(10));
 
-insert into R1 values(1,'Roshan');
+insert into R1 values(1,'john');
 insert into R1 values(2,'Ganesh');---- in PK constraints Not allowed Duplicate value
 insert into R1 values(null,'Mohan');  ---in PK constraints null value not allowed
 select * from R1
@@ -56,22 +56,22 @@ select * from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME= 'R1'
 
 create table R2(id int unique,name varchar(10));
 insert into R2 values(1,'Sneha');
-insert into R2 values(1,'Roshan');   --in unique constraints duplicate values not allowed (Duplicate Value Restricted)
+insert into R2 values(1,'john');   --in unique constraints duplicate values not allowed (Duplicate Value Restricted)
 insert into R2 values(null,'Ajay');
 select * from R2
 
 --3. Not Null------> Null value Restricted
 
 create table R3(id int,name varchar(10) not null);
-insert into R3 values(1,'Roshan');
+insert into R3 values(1,'john');
 insert into R3 values(2,null);   --in Not Null constraints not allowed null value
 
 create table R4(id int primary key,name varchar(10) unique not null);
 
 insert into R4 values(1,'Kumar');
-insert into R4 values(1,'Roshan'); ---Pk not allowed duplicate value
-insert into R4 values (2,'Roshan');
-insert into R4 values(3,'Roshan');----unique, constraints not allowed duplicate
+insert into R4 values(1,'john'); ---Pk not allowed duplicate value
+insert into R4 values (2,'john');
+insert into R4 values(3,'john');----unique, constraints not allowed duplicate
 insert into R4 values(4,null); ---not null, constraints not allowed null values
 insert into R4 values(4,'Sharad');
 insert into R4 values(3,'Sneha')
@@ -103,16 +103,16 @@ update R7 set city = default where id = 4;
 --6. Auto Increment (identity)
 
 create table R8(id int identity, name varchar(10));
-insert into R8 values('Roshan');
-insert into R8 values('Asha');
+insert into R8 values('john');
+insert into R8 values('grace');
 insert into R8 values('Sneha');
 insert into R8 values('Ganesh');
 insert into R8 values('Mohan');
 select * from R8;
 
 create table R9(id int identity(100,10), name varchar(10));
-insert into R9 values('Roshan');
-insert into R9 values('Asha');
+insert into R9 values('john');
+insert into R9 values('grace');
 insert into R9 values('Sneha');
 insert into R9 values('Ganesh');
 insert into R9 values('Mohan');
@@ -130,11 +130,11 @@ select * from department;
 
 create table student(S_ID int, name varchar(10), DID int foreign key references department(DID));
 select * from student;
-insert into student values(101,'Roshan',3);
+insert into student values(101,'john',3);
 insert into student values(102,'Sneha',1);
 insert into student values(103,'Mona',4);
-insert into student values(104,'Asha',5);
-insert into student values(105,'Komal',2);
+insert into student values(104,'grace',5);
+insert into student values(105,'kamal',2);
 insert into student values(106,'Ganesh',4);
 
 --Set Operator
