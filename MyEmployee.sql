@@ -5,8 +5,8 @@ Gender varchar(10),
 Salary int,
 City varchar(10),Dpt_id int)
 
-insert into MyEmployee values (100,'Roshan','Male',25000,'kurkheda',2),
-(101,'Komal','Male',22000,'kurkheda',1),
+insert into MyEmployee values (100,'izack','Male',25000,'usa',2),
+(101,'grace','Male',22000,'usa',1),
 (102,'Neha','Female',47000,'Nagpur',2),
 (103,'Ajay','Male',35000,'Pune',47),
 (105,'Asha','Female',20000,'Wardha',5),
@@ -14,7 +14,7 @@ insert into MyEmployee values (100,'Roshan','Male',25000,'kurkheda',2),
 (107,'Dinesh','Male',25000,'Mumbai',6),
 (108,'Sandip','Male',34000,'Mumbai',4),
 (109,'suman','Female',35000,'Pune',7),
-(110,'Heena','Female',15000,'kurkheda',2)
+(110,'Heena','Female',15000,'usa',2)
 
 select * from MyEmployee
 update MyEmployee set Dpt_id=4 where Emp_id=103;
@@ -79,7 +79,7 @@ select * from MyEmployee;
 
 select * from vw4;
 
-insert into vw4 values( 111,'gauri','female',40000,'kurkheda',1);
+insert into vw4 values( 111,'gauri','female',40000,'usa',1);
 delete from vw4 where Emp_id = 111;
 update vw4 set salary = 45000 where Emp_id = 110;
 
@@ -91,11 +91,11 @@ where Emp_id in ( select Emp_id from MyEmployee where Salary>=30000);
 
 select Emp_name,Gender,salary, city from MyEmployee
 where Emp_id in 
-(select Emp_id from myemployee where city = 'kurkheda');
+(select Emp_id from myemployee where city = 'usa');
 
 update MyEmployee set Salary = salary + 5000
 where Emp_id in
-(select Emp_id from MyEmployee where City = 'Kurkheda');
+(select Emp_id from MyEmployee where City = 'usa');
 
 update MyEmployee set Gender = 'Female'
 where Emp_name in ( select Emp_name from MyEmployee where Emp_name = 'Gauri');
@@ -120,11 +120,11 @@ select * from MyEmployee where Dpt_id =
 
 select * from MyEmployee
 where Salary< any
-(select salary from MyEmployee where Emp_name = 'Roshan' or Emp_name = 'Neha');
+(select salary from MyEmployee where Emp_name = 'izack' or Emp_name = 'Neha');
 
 select * from MyEmployee
 where Salary< all
-(select salary from MyEmployee where Emp_name = 'Roshan' or Emp_name = 'Neha');      --( Roshan = 30000, Neha = 47000)
+(select salary from MyEmployee where Emp_name = 'izack' or Emp_name = 'Neha');      --( izack = 30000, Neha = 47000)
 
 ---alter command --
 
@@ -180,7 +180,7 @@ drop table Employee_backup
 select A.*,B.Dept_Name into Employee_backup from MyEmployee as A
 inner join MyDepartment as B on A.Dpt_id = B.id;
 
-select * from Employee_backup where City = 'kurkheda';
+select * from Employee_backup where City = 'usa';
 
 select * into Employee_backup from MyEmployee where 1<>1;
 
@@ -236,7 +236,7 @@ end;
 
 drop procedure spget2
 
-execute spget2 100,Roshan;
+execute spget2 100,izack;
 
 --Alter command with encryption
 sp_helptext spget2;
