@@ -76,10 +76,10 @@ alter table Emp1 alter column email varchar(50);
 alter table Emp1 alter column designation varchar(20);
 
 create table Emp1(emp_id int unique not null,emp_name varchar(10) not null,email varchar(10) not null,designation varchar(10) not null);
-insert into Emp1 values(11,'Roshan','roshan@gmail.com','Engineer');
+insert into Emp1 values(11,'izack','izack@gmail.com','Engineer');
 insert into Emp1 values(12,'Ganesh','ganesh@gmail.com','Trainee');
 insert into Emp1 values(13,'Heena','heena@gmail.com','Junior');
-insert into Emp1 values(14,'Asha','asha@gmail.com','Officer');
+insert into Emp1 values(14,'grace','grace@gmail.com','Officer');
 insert into Emp1 values(15,'Mohan','mohan@gmail.com','Manager');
 insert into Emp1 values(16,'Rohan','Rohan@gmail.com','Sr.Engg');
 insert into Emp1 values(17,'Neha','neha@gmail.com','Ass.Engg');
