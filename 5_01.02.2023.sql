@@ -32,8 +32,8 @@ select getdate()+1 as Next_Day;	 --Next date
 
 --1. datediff   (03 nos agrument requirement)
 
-select DATEDIFF(yy,'1993-10-17',getdate());
-select DATEDIFF(MM,'1993-10-17',getdate());
+select DATEDIFF(yy,'1987-06-29',getdate());
+select DATEDIFF(MM,'1987-06-14',getdate());
 
 Create table Account_details (
 ACCT_NUMBER int primary key identity(11112881,1),
