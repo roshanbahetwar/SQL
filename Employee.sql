@@ -6,10 +6,10 @@ LastName varchar(10),
 City varchar(10),
 Savings int
 )
-insert into ME values(11,'Roshan','Bahetwar','kurkheda',1000),(12,'Rakesh','Nema','Tumsar',1300),
-(13,'Rahul','Kumar','Gondia',1200),
-(14,'Ajay','Kumar','Nagpur',1500),
-(15,'Kamal','varma','Raipur',1900);
+insert into ME values(11,'robert','john','usa',1000),(12,'karl','mark','Toronto',1300),
+(13,'Rony','kate','canada',1200),
+(14,'Albert','Kim','NorthAmer',1500),
+(15,'Kennedy','vorde','Russia',1900);
 select * from ME
 
 --1.char size (8000)
