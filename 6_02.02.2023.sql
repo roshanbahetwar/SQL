@@ -1,7 +1,7 @@
 
 --Substring
 
-select 'Roshan'
+select 'Rose'
 select substring('Scodeen',2,4);
 select * from MyEmployee;
 
@@ -16,7 +16,7 @@ select REPLICATE(FirstName +'  ',4) from employee1;
 
 --Replace
 select replace(FirstName, 'S','G') from employee1;
-select REPLACE('Roshan','R','M');
+select REPLACE('Rose','R','M');
 
 --Trim 
 
@@ -46,7 +46,7 @@ select convert(varchar, Join_date,100) from DOJ;
 --CharIndex
 select * from Emp1
 
-select CHARINDEX('@','roshanbahetwar017@gmail.com');
+select CHARINDEX('@','rose@gmail.com');
 
 select SUBSTRING(email,charindex('@',email)+1,len(email)) as DomainName from Emp1;   ---get string after @
 ---select substring(col_name,position vlue,length)
